@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\Lutz\Projects\oscilloscope\main.v4p" systemname="main" filename="C:\Users\Lutz\Projects\oscilloscope\main.v4p" scrollx="8" scrolly="720">
-   <BOUNDS type="Window" left="-200" top="2480" width="14744" height="11464">
+   <PATCH nodename="C:\Users\Lutz\Projects\sound_visualisations\oscilloscope\main.v4p" systemname="main" filename="C:\Users\Lutz\Projects\oscilloscope\main.v4p" scrollx="8" scrolly="720">
+   <BOUNDS type="Window" left="10640" top="1656" width="14744" height="11464">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -337,7 +337,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3620" top="2900" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="10">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
