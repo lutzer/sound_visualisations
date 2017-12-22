@@ -1,0 +1,177 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="C:\Users\Lutz\Projects\sound_visualisations\oszi-cam\_cam.v4p" systemname="_cam" filename="C:\Users\Lutz\Projects\sound_visualisations\oszi-cam\_cam.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="2888" top="2328" width="14520" height="11384">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="VideoIn (DShow9)" nodename="VideoIn (DShow9)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1592" top="2744" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Driver" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Video" visible="1">
+   </PIN>
+   <PIN pinname="Video Format" visible="1">
+   </PIN>
+   <PIN pinname="Framerate" slicecount="1" values="60">
+   </PIN>
+   <PIN pinname="Width" visible="1">
+   </PIN>
+   <PIN pinname="Analog Video Input" visible="1" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Analog Video Standard" visible="1" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" visible="1" values="768">
+   </PIN>
+   <PIN pinname="Stream Capabilities" visible="1">
+   </PIN>
+   <PIN pinname="Property Page" slicecount="1" values="0" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="1">
+   <BOUNDS type="Box" left="5976" top="496" width="1392" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5976" top="496" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|Logitech HD Pro Webcam C910|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|Logitech HD Pro Webcam C910|">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Driver">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output Enum" dstnodeid="0" dstpinname="Driver">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="2">
+   <BOUNDS type="Box" left="824" top="336" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="824" top="336" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="VideoTexture (EX9.Texture VMR9)" nodename="VideoTexture (EX9.Texture VMR9)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1728" top="3264" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Video" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Average Framerate" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Video" dstnodeid="3" dstpinname="Video">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="5">
+   <BOUNDS type="Box" left="3168" top="4768" width="696" height="208">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3168" top="4768" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Average Framerate|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Average Framerate" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="8">
+   <BOUNDS type="Box" left="3736" top="736" width="1392" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3736" top="736" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RGB24">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="I420">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output Enum" dstnodeid="0" dstpinname="Video Format">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
+   <BOUNDS type="Box" left="1904" top="1184" width="696" height="208">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1904" top="1184" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1920">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Width">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12">
+   <BOUNDS type="Box" left="2752" top="984" width="696" height="208">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2752" top="984" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1080">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Height">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="16">
+   <BOUNDS type="Box" left="1672" top="4792" width="696" height="208">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1672" top="4792" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Texture Out" dstnodeid="16" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17">
+   <BOUNDS type="Box" left="1640" top="376" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1640" top="376" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Property Page|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Property Page">
+   </LINK>
+   </PATCH>
